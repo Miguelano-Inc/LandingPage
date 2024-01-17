@@ -34,7 +34,7 @@
 
     header,
     footer {
-      background: yellowgreen;
+      background: purple;
       min-height: 100px;
       display: flex;
       align-items: center;
@@ -59,7 +59,7 @@
 
     nav,
     aside {
-      background: beige;
+      background: blue;
     }
 
     @media screen and (min-width: 768px) {
@@ -104,14 +104,14 @@ a {
 
 /* Heading Styles */
 h1 {
-  font-size: 30px;
+  font-size: 48px;
   font-weight: 600;
-  margin: 10px 0;
+  margin: 16px 0;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 36px;
   font-weight: 300;
   margin: 10px 0;
   line-height: 1.2;
@@ -119,7 +119,7 @@ h2 {
 
 /* Paragraph Styles */
 p {
-  font-size: 30px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
@@ -216,13 +216,14 @@ li {
       <H2>By Michael Que</H2>
       <H4>San Francisco, California</H4>
     </article>
-    <nav>Nav</nav>
+    <nav>Nav list
+      <li>Projects</li>
+      <li>Online Bookstore</li>
+      <li>Consulting</li>
+    </nav>
     <aside>
       <Container>
         <button>Profile</button>
-        <button>Projects</button>
-        <button>Online Store</button>
-        <button>Consulting</button>
         </Container>
     </aside>
   </div>
