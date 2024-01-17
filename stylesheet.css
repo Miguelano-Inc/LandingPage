@@ -9,6 +9,8 @@
 /* White text throughout */
 
 body {
+  background: linear-gradient (to left, #6600cc 0%, #0099cc 100%);
+    <style>
   font-family: "lato", sans-serif;
   color: white;
 }
@@ -49,8 +51,6 @@ li {
   list-style-type: none;
 }
 
-
-
 p {
   font-size: 20px;
   margin: 10px 0;
@@ -78,37 +78,37 @@ p {
 		}
 /* Centers it, sets a maximum width and makes sure elements can flow past it*/
 
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  overflow: visible;
-}
+    .container {
+        margin: 0 auto;
+        max-width: 1200px;
+        overflow: visible;
+      }
 
 /* Sets background color, height and padding*/
 
-.navbar {
-  background-color: purple;
-  height: 70px;
-  padding: 0 30px;
+      .navbar {
+        background-color: purple;
+        height: 70px;
+        padding: 0 30px;
 }
 /* Sets font size, reduces font-weight, adds margin and line height */
 
-.navbar h1 {
-  font-size: 30px;
-  font-weight: 300;
-  margin: 10px 0;
-  line-height: 1.2;
-}
-.navbar .flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-.navbar ul {
-  display: flex;
-}
-
+      .navbar h1 {
+        font-size: 30px;
+        font-weight: 300;
+        margin: 10px 0;
+        line-height: 1.2;
+      }
+      .navbar .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+      .navbar ul {
+        display: flex;
+      }
+      
 /* Changes the color of both links to white, adds padding between them and margin as well */
 
 .navbar a {
@@ -120,3 +120,103 @@ p {
   color: #9867C5;
   border-bottom: 3px solid #9867C5;
 }
+
+    {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-Lato: Arial, sans-serif;
+      justify-content: center;
+    }
+    
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+      padding: 1em;
+    }
+
+    header,
+    footer {
+      font: white;
+      background: #ffF
+      opacity .5;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    article,
+    nav,
+    aside {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    article {
+      background: #f0f0f0;
+      height: 100%;
+        display: flex;
+      justify-content: center;
+      }
+    }
+
+    nav,
+    aside {
+      background: purple;
+      opacity: .5;
+    }
+
+    @media screen and (min-width: 768px) {
+      #main {
+        flex-direction: row;
+      }
+
+      article {
+        flex: 2;
+        margin-right: 1em;
+        margin-bottom: 0;
+      }
+
+      nav,
+      aside {
+        flex: 1;
+      }
+
+      nav {
+        order: -1;
+      }
+    }
+    /* Footer Styles */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: yellowgreen
+      opacity: .5;
+      height: 10vh;
+    }
+    .copyright {
+      color: white;
+      margin-left: 20px;
+    }
+
+    .contact-info {
+      color: white;
+      margin-right: 20px;
+    }
