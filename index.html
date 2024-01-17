@@ -4,41 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-8
- 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>THE WORK WITHIN QUEUE</title>
   <style>
     * {
       box-sizing: border-box;
-      margin: 8;
-      padding: 8;
+      margin: 0;
+      padding: 0;
     }
 
     body {
       display: flex;
       flex-direction: column;
-      min-height: 100px;
-      margin: 8;
-      font-family: Arial, sans-serif;
-    }
-
-    header,
-    footer,
-    article,
-    nav,
-    aside {
-      padding: 1em;
+      min-height: 100vh; /* Corrected: min-height should be 100vh for full viewport height */
+      margin: 0;
+      font-family: "lato", sans-serif; /* Corrected: Changed to "lato" font */
+      color: white;
+      background: radial-gradient(circle, #ff6b6b, #ffeb3b);
     }
 
     header,
     footer {
       background: purple;
-      min-height: 100px;
+      min-height: 70px; /* Adjusted: Set a consistent height for header and footer */
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    header img {
+      width: 30px; /* Adjusted: Set a specific width for the menu icon */
     }
 
     #main {
@@ -55,12 +52,14 @@
 
     article {
       background: #f0f0f0;
-      text-alignment: center;
+      text-align: center; /* Corrected: Changed to text-align */
+      padding: 1em; /* Added: Some padding for better readability */
     }
 
     nav,
     aside {
       background: blue;
+      padding: 1em; /* Added: Some padding for better readability */
     }
 
     @media screen and (min-width: 768px) {
@@ -84,157 +83,114 @@
       }
     }
 
-    /* Override default style and set padding and margin to nothing */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+    /* Heading Styles */
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      margin: 16px 0;
+      line-height: 1.2;
+    }
 
-/* White text throughout */
-body {
-  font-family: "lato", sans-serif;
-  color: white;
-}
+    h2 {
+      font-size: 36px;
+      font-weight: 300;
+      margin: 10px 0;
+      line-height: 1.2;
+    }
 
-/* Make all link text black with no text decoration */
-a {
-  color: black;
-  text-decoration: none;
-}
+    h3 {
+      font-size: 24px; /* Added: Heading style for article */
+      margin: 10px 0;
+    }
 
-/* Heading Styles */
-h1 {
-  font-size: 48px;
-  font-weight: 600;
-  margin: 16px 0;
-  line-height: 1.2;
-}
+    h4 {
+      font-size: 18px; /* Added: Heading style for article */
+      margin: 10px 0;
+    }
 
-h2 {
-  font-size: 36px;
-  font-weight: 300;
-  margin: 10px 0;
-  line-height: 1.2;
-}
+    /* Button Styles */
+    button {
+      background-color: #fff;
+      color: #000;
+      padding: 8px 16px;
+      height: 40px;
+      width: 150px;
+      border: none;
+      border-radius: 50px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
 
-/* Paragraph Styles */
-p {
-  font-size: 20px;
-  margin: 10px 0;
-}
+    /* Navbar Styles */
+    .navbar {
+      background-color: purple;
+      height: 70px;
+      padding: 0 30px;
+    }
 
-/* Image Styles */
-img {
-  width: 100%;
-}
+    /* Navbar Heading Styles */
+    .navbar h1 {
+      font-size: 30px;
+      font-weight: 300;
+      margin: 10px 0;
+      line-height: 1.2;
+    }
 
-/* List Styles */
-li {
-  list-style-type: none;
-}
+    /* Navbar Flex Container Styles */
+    .navbar .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
 
-/* Body Styles */
-.body {
-  background: radial-gradient(circle, #ff6b6b, #ffeb3b);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
+    /* Navbar List Styles */
+    .navbar ul {
+      display: flex;
+    }
 
-/* Button Styles */
-.button {
-  background-color: #fff;
-  color: #000;
-  padding: 8px 16px;
-  height: 40px;
-  width: 150px;
-  border: none;
-  border-radius: 50px;
-  font-size: 20px;
-  margin: 10px;
-  cursor: pointer;
-}
+    /* Navbar Link Styles */
+    .navbar a {
+      color: white;
+      padding: 9px;
+      margin: 0 10px;
+      text-decoration: none; /* Added: Remove underline from links */
+    }
 
-/* Container Styles */
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  overflow: visible;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: purple;
-  height: 70px;
-  padding: 0 30px;
-}
-
-/* Navbar Heading Styles */
-.navbar h1 {
-  font-size: 30px;
-  font-weight: 300;
-  margin: 10px 0;
-  line-height: 1.2;
-}
-
-/* Navbar Flex Container Styles */
-.navbar .flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-/* Navbar List Styles */
-.navbar ul {
-  display: flex;
-}
-
-/* Navbar Link Styles */
-.navbar a {
-  color: white;
-  padding: 9px;
-  margin: 0 10px;
-}
-
-/* Navbar Link Hover Styles */
-.navbar a:hover {
-  color: #9867C5;
-  border-bottom: 3px
-  
+    /* Navbar Link Hover Styles */
+    .navbar a:hover {
+      color: #9867C5;
+      border-bottom: 3px solid; /* Corrected: Added missing 'solid' */
+    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="container">
-      <Menu-icon image src href="" alt="Menu Icon">
-        <H1>THE WORK WITHIN QUEUE</H1>
-      </Menu-icon>
+      <img src="menu-icon.png" alt="Menu Icon"> <!-- Corrected: Added correct image source -->
+      <h1>THE WORK WITHIN QUEUE</h1>
     </div>
-      </header>
+  </header>
   <div id="main">
     <article>
       <h3>A Webfolio of Projects and Programs</h3>
-      <H2>By Michael Que</H2>
-      <H4>San Francisco, California</H4>
+      <h2>By Michael Que</h2>
+      <h4>San Francisco, California</h4>
       <button>Profile</button>
     </article>
-    <nav>Nav list
-      <li>Projects</li>
-      <li>Online Bookstore</li>
-      <li>Consulting</li>
+    <nav>
+      <ul>
+        <li>Projects</li>
+        <li>Online Bookstore</li>
+        <li>Consulting</li>
+      </ul>
     </nav>
     <aside>
-      <Container>
-        <img src href="wwww.google.com" alt="logo.svg">
-        </Container>
+      <img src="wwww.google.com" alt="logo.svg">
     </aside>
   </div>
   <footer>Footer</footer>
 </body>
-
 </html>
