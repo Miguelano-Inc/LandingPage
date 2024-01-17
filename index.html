@@ -1,38 +1,206 @@
-<!doctype html>
-<title>Example</title>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+      padding: 1em;
+    }
+
+    header,
+    footer {
+      background: yellowgreen;
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    article,
+    nav,
+    aside {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    article {
+      background: #f0f0f0;
+    }
+
+    nav,
+    aside {
+      background: beige;
+    }
+
+    @media screen and (min-width: 768px) {
+      #main {
+        flex-direction: row;
+      }
+
+      article {
+        flex: 2;
+        margin-right: 1em;
+        margin-bottom: 0;
+      }
+
+      nav,
+      aside {
+        flex: 1;
+      }
+
+      nav {
+        order: -1;
+      }
+    }
+
+    /* Override default style and set padding and margin to nothing */
 * {
-  box-sizing: border-box; 
-}
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
-#main {
+
+/* White text throughout */
+body {
+  font-family: "lato", sans-serif;
+  color: white;
+}
+
+/* Make all link text black with no text decoration */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+/* Image Styles */
+img {
+  width: 100%;
+}
+
+/* List Styles */
+li {
+  list-style-type: none;
+}
+
+/* Body Styles */
+.body {
+  background: radial-gradient(circle, #ff6b6b, #ffeb3b);
   display: flex;
-  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-#main > article {
-  flex: 1;
+
+/* Button Styles */
+.button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
 }
-#main > nav, 
-#main > aside {
-  flex: 0 0 20vw;
-  background: beige;
+
+/* Container Styles */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: visible;
 }
-#main > nav {
-  order: -1;
+
+/* Navbar Styles */
+.navbar {
+  background-color: purple;
+  height: 70px;
+  padding: 0 30px;
 }
-header, footer {
-  background: yellowgreen;
-  height: 20vh;
+
+/* Navbar Heading Styles */
+.navbar h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 1.2;
 }
-header, footer, article, nav, aside {
-  padding: 1em;
+
+/* Navbar Flex Container Styles */
+.navbar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
-</style>
+
+/* Navbar List Styles */
+.navbar ul {
+  display: flex;
+}
+
+/* Navbar Link Styles */
+.navbar a {
+  color: white;
+  padding: 9px;
+  margin: 0 10px;
+}
+
+/* Navbar Link Hover Styles */
+.navbar a:hover {
+  color: #9867C5;
+  border-bottom: 3px
+  
+  </style>
+</head>
+
 <body>
   <header>Header</header>
   <div id="main">
@@ -43,25 +211,4 @@ header, footer, article, nav, aside {
   <footer>Footer</footer>
 </body>
 
-.body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
-}
-
-.main {
-  display: flex;
-  flex: 1;
-}
-#main > article {
-  flex: 1;
-}
-#main > nav, 
-#main > aside {
-  flex: 0 0 20vw;
-  background: beige;
-}
-.main > nav {
-  order: -1;
-}
+</html>
