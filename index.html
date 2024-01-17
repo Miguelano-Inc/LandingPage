@@ -4,39 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>THE WORK WITHIN QUEUE</title>
+  <title>Example Landing Page</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle, #ff6b6b, #ffeb3b);
     }
 
-    article {
+    body {
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Corrected: min-height should be 100vh for full viewport height */
+      min-height: 100vh;
       margin: 0;
-      font-family: "lato", sans-serif; /* Corrected: Changed to "lato" font */
-      color: white;
-      background: radial-gradient(circle, #ff6b6b, #ffeb3b);
+      font-family: Arial, sans-serif;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+      padding: 1em;
     }
 
     header,
     footer {
-      background: purple;
-      min-height: 70px; /* Adjusted: Set a consistent height for header and footer */
+      background: yellowgreen;
+      height: 20vh;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    header img {
-      width: 30px; /* Adjusted: Set a specific width for the menu icon */
     }
 
     #main {
@@ -48,20 +46,16 @@
     nav,
     aside {
       width: 100%;
-      margin-bottom: 0em;
-      text-alignment: center
+      margin-bottom: 1em;
     }
 
     article {
       background: #f0f0f0;
-      text-align: center; /* Corrected: Changed to text-align */
-      padding: 0em; /* Added: Some padding for better readability */
     }
 
     nav,
     aside {
-      background: blue;
-      padding: 0em; /* Added: Some padding for better readability */
+      background: beige;
     }
 
     @media screen and (min-width: 768px) {
@@ -85,116 +79,99 @@
       }
     }
 
-    /* Heading Styles */
-    h1 {
-      font-size: 48px;
-      font-weight: 600;
-      margin: 16px 0;
-      line-height: 1.2;
-    }
-
-    h2 {
-      font-size: 36px;
-      font-weight: 300;
-      margin: 16px 0;
-      line-height: 1.2;
-    }
-
-    h3 {
-      font-size: 24px; /* Added: Heading style for article */
-      margin: 8px 0;
-    }
-
-    h4 {
-      font-size: 18px; /* Added: Heading style for article */
-      margin: 8px 0;
-    }
-
-    /* Button Styles */
-    button {
-      background-color: #purple;
-      color: #000;
-      padding: 8px 16px;
-      height: 40px;
-      width: 150px;
-      border: none;
-      border-radius: 50px;
-      font-size: 20px;
-      margin: 10px;
+    /* Navigation Icon and Overlay Styles */
+    .nav-icon {
+      display: block;
       cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
     }
 
-    /* Navbar Styles */
-    .navbar {
-      background-color: purple;
-      height: 70px;
-      padding: 0 30px;
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
 
-    /* Navbar Heading Styles */
-    .navbar h1 {
-      font-size: 30px;
-      font-weight: 300;
-      margin: 10px 0;
-      line-height: 1.2;
+    .nav-list {
+      list-style-type: none;
+      padding: 10px;
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 70%;
+      height: 100%;
+      z-index: 3;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
     }
 
-    /* Navbar Flex Container Styles */
-    .navbar .flex {
+    .nav-list li {
+      margin-bottom: 10px;
+    }
+
+    .nav-icon:checked+.nav-overlay {
+      display: block;
+    }
+
+    .nav-icon:checked+.nav-overlay .nav-list {
+      transform: translateX(0);
+    }
+
+    /* Footer Styles */
+    footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 100px;
+      background: yellowgreen;
+      height: 20vh;
     }
 
-    /* Navbar List Styles */
-    .navbar ul {
-      display: flex;
-    }
-
-    /* Navbar Link Styles */
-    .navbar a {
+    .copyright {
       color: white;
-      padding: 8px;
-      margin: 0 10px;
-      text-decoration: none; /* Added: Remove underline from links */
+      margin-left: 20px;
     }
 
-    /* Navbar Link Hover Styles */
-    .navbar a:hover {
-      color: #9867C5;
-      border-bottom: 3px solid; /* Corrected: Added missing 'solid' */
+    .contact-info {
+      color: white;
+      margin-right: 20px;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <header class="container">
-      <img src="menu-icon.png" alt="Menu Icon"> <!-- Corrected: Added correct image source -->
-      <header text="THE WORK WITHIN QUEUE" style="h1.stylee.css"></headertext>
-      </container>
-  </header>
-  <div id="main">
-    <article>
-      <center>
-      <h3>A Webfolio of Projects and Programs</h3>
-      <h2>By Michael Que</h2>
-      <h4>San Francisco, California</h4>
-      <button>Profile</button>
-    </center>
-    </article>
-    <nav>
-      <ul>
-        <li>Projects</li>
-        <li>Online Bookstore</li>
-        <li>Consulting</li>
-      </ul>
-    </nav>
-    <aside>
-      <img src="wwww.google.com" alt="logo.svg">
-    </aside>
+  <input type="checkbox" id="nav-toggle" class="nav-icon">
+  <label for="nav-toggle" class="nav-icon">&#9776;</label>
+  <div class="nav-overlay">
+    <ul class="nav-list">
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">The Online Book Store</a></li>
+      <li><a href="#">Consulting</a></li>
+    </ul>
+    </ul>
   </div>
-  <footer>Miguelano Designs</footer>
+  <header>Header</header>
+  <div id="main">
+    <article>Article</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>
+    <div class="copyright">
+      &copy; 2024 Your Company | <a href="#">Homepage</a>
+    </div>
+    <div class="contact-info">
+      <a href="#">About</a> | <a href="#">Contact</a>
+    </div>
+  </footer>
 </body>
+
 </html>
