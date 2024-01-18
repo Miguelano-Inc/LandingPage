@@ -53,17 +53,6 @@ button {
   transition: background-color 0.10s, color 0.30s;
 }
 
-/* Navigation Styles */
-.nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.nav-list li {
-  margin-bottom: 10px;
-}
 
 /* Project Section Styles */
 .project-section {
