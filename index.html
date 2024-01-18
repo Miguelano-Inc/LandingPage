@@ -142,37 +142,62 @@
   <header>
     <h1>The Work Within Queue</h1>
   </header>
+<style>
+  aside {
+    padding: 20px;
+  }
 
-  <div id="main">
-    <article>
-      <h3>A Webfolio of Projects and Programs</h3>
-      <h2>By Michael Que</h2>
-      <h4>San Francisco, California</h4>
-      <button>Profile</button>
-    </article>
-    <nav></nav>
-	<aside>
-    <div class="project-section">
-      <div class="project-box">
-        <h3>Projects</h3>
-        <p>Description of Projects</p>
-        <img src="project-image.jpg" alt="Projects Image">
-      </div>
+  .project-section {
+    display: flex;
+    justify-content: space-around;
+  }
 
-      <div class="project-box">
-        <h3>The Online Book Store</h3>
-        <p>Description of The Online Book Store</p>
-        <img src="bookstore-image.jpg" alt="Book Store Image">
-      </div>
+  .project-box {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
 
-      <div class="project-box">
-        <h3>Consulting</h3>
-        <p>Description of Consulting</p>
-        <img src="consulting-image.jpg" alt="Consulting Image">
-      </div>
+  .project-box:hover {
+    background-color: #3498db; /* Change the color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+  }
+
+  .project-box h3 {
+    margin-bottom: 10px;
+  }
+
+  .project-box img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+</style>
+
+<aside>
+  <div class="project-section">
+    <div class="project-box">
+      <h3>Projects</h3>
+      <p>Description of Projects</p>
+      <img src="project-image.jpg" alt="Projects Image">
     </div>
 
-    </aside>
+    <div class="project-box">
+      <h3>The Online Book Store</h3>
+      <p>Description of The Online Book Store</p>
+      <img src="bookstore-image.jpg" alt="Book Store Image">
+    </div>
+
+    <div class="project-box">
+      <h3>Consulting</h3>
+      <p>Description of Consulting</p>
+      <img src="consulting-image.jpg" alt="Consulting Image">
+    </div>
+  </div>
+</aside>
+e>
   </div>
 
   <footer>
