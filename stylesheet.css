@@ -26,7 +26,8 @@ h1 {
 
 /* Main Section Styles */
 #main {
-  display: flex;
+
+  box-sizing: border-box;display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
