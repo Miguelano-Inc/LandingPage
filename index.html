@@ -1,87 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Work Within Queue</title>
-
-  <header>
-    <img src="QueueLogo.png" class="w3-circle" alt="Weblogo">
-    <div class="w3-top">
-      <div class="w3-bar w3-black">
-        <a href="#home" class="w3-bar-item w3-button">Home</a>
-        <a href="#about" class="w3-bar-item w3-button">About</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-      </div>
-    </div>
-    <a href="#login" class="login-link">Login</a>
-  </head>
-  </header>
-
-      <body>
-
-<div class="container project-section">
-  <!-- Your content goes here -->
-
-
-<article>
-      <div class="article-content">
-        <h3>A Webfolio of Projects and Programs</h3>
-        <p>By Michael Que</p>
-        <p>San Francisco, California</p>
-        <button>Profile</button>
-      </div>
-    </article>
   
-
-
-      <div class="project-box1">
-        <h3>Projects</h3>
-        <p>Description of Projects</p>
-        <img src="project-image.jpg" alt="Projects Image">
-      </div>
-
-      <div class="project-box2">
-        <h3>The Online Book Store</h3>
-        <p>Description of The Online Book Store</p>
-        <img src="bookstore-image.jpg" alt="Book Store Image">
-      </div>
-
-      <div class="project-box3">
-        <h3>Consulting</h3>
-        <p>Description of Consulting</p>
-        <img src="consulting-image.jpg" alt="Consulting Image">
-      </div>
-
-
-
-    <section>
-      <h2>Section</h2>
-      <div>
-        <h3>Section Title</h3>
-        <p>Section content goes here.</p>
-      </div>
-    </section>
-        
-      </body>
-  </div>
-
-  <footer>
-    <div class="copyright">
-      &copy; 2023 Miguelano Designs 
-    </div>
-    <div class="Legal Notices">
-      <a href="#">Privacy Notice</a> | <a href="#">Terms & Condition</a>
-    </div>
-  </footer>
-
-</html>
-/* Reset default style and set padding and margin to zero 
-body {
+  <style>
+    /* Reset default style and set padding and margin to zero */
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+/* White text throughout */
+body {
   background: linear-gradient(to left, #6600cc 0%, #0099cc 100%);
   font-family: 'Arial', sans-serif;
   color: white; /* Set text color to white */
@@ -89,15 +23,26 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #878f99;
-  color: #fff;
-  padding: 16px;
-  margin-top: 16px;
+  background-color: #000; /* Black header */
+  color: white;
+  padding: 10px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
+}
+
+/* Main Section Styles */
+#main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
 h3,
 h2,
 h4 {
@@ -112,12 +57,16 @@ h4 {
 }
 
 .project-box {
-  box-sizing: border-box;
   position: relative;
-  justify-content: center;
   overflow: hidden;
-  min-width: 200px
-ient(45deg, #8e44ad, #9b59b6, #a349a4, #943bea);
+  width: calc(33.33% - 20px); /* Three responsive squares with margin */
+  padding-top: 16px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background: #d8d5f3; /* Light purple color */
 }
 
 .project-box:hover {
@@ -140,7 +89,7 @@ footer {
   flex-direction: column; /* For smaller screens */
   justify-content: space-between;
   align-items: center;
-  background: var(--primary-color);
+  background: #000; /* Black footer */
   color: white;
   padding: 10px;
   margin-top: 20px;
@@ -180,7 +129,154 @@ footer {
 }
 
 button {
-  background-color: green;
+  background-color: #ff7b25;
+  color: white; /* Set text color to white */
+  padding: 8px 16px;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.10s, color 0.30s;
+}
+
+.login-btn,
+button {
+  border-radius: 5px; /* Keep it consistent */
+}
+
+    /* Reset default style and set padding and margin to zero */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* White text throughout */
+body {
+  background: linear-gradient(to left, #6600cc 0%, #0099cc 100%);
+  font-family: 'Arial', sans-serif;
+  color: white; /* Set text color to white */
+}
+
+/* Header Styles */
+header {
+  background-color: #878f99;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+      display: flex;
+      justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Main Section Styles */
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h3,
+h2,
+h4 {
+  margin: 5px 0;
+}
+
+/* Project Section Styles */
+.project-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-box {
+  position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 16px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(45deg, #8e44ad, #9b59b6, #a349a4, #943bea);
+}
+
+.project-box:hover {
+  transform: scale(1.1);
+}
+
+.project-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  flex-direction: column; /* For smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  width: Auto;
+}
+
+.copyright,
+.contact-info {
+  margin-top: 10px;
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 600px) {
+  #main {
+    flex-direction: row;
+  }
+
+  article {
+    box-sizing: border-box;
+    margin-right: 20px;
+    justify-content: center;
+  }
+
+  .nav-list {
+    text-align: left;
+  }
+
+  .project-box {
+    width: calc(33.33% - 20px);
+  }
+
+  footer {
+    flex-direction: row; /* For larger screens */
+  }
+}
+
+/* Button Styles */
+:root {
+  --primary-color: #3498db; /* Define a variable for the primary color */
+}
+
+button {
+  background-color: #ff7b25;
   color: #fff;
   padding: 8px 16px;
   height: 40px;
@@ -188,15 +284,81 @@ button {
   border: none;
   border-radius: 50px;
   font-size: 20px;
-  margin: 8px;
+  margin: 10px;
   cursor: pointer;
   transition: background-color 0.10s, color 0.30s;
 }
 
 .login-btn,
 button {
-  /* ... other styles ... *//
-  border-radius: 5px; /* Keep it consistent;
-  background-color: #ff7b25;
- transition: background-color 0.10s, color 0.30s;
-  
+  /* ... other styles ... */
+  border-radius: 5px; /* Keep it consistent */
+}
+    /* Your CSS styles go here */
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <img src="QueueLogo.png" class="w3-circle" alt="Weblogo">
+    <div class="w3-top">
+      <div class="w3-bar w3-black">
+        <a href="#home" class="w3-bar-item w3-button">Home</a>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
+    </div>
+ <button class="login-btn" onclick="redirectToGoogleAuthentication()">Login</button>
+  </header>
+  <div class="main-container">
+    
+      <div class="article-content">
+        <h3>A Webfolio of Projects and Programs</h3>
+        <p>By Michael Que</p>
+        <p>San Francisco, California</p>
+        <button>Profile</button>
+      </div>
+
+    <div class="project-section">
+      <div class="project-box">
+        <h3>Projects</h3>
+        <p>Description of Projects</p>
+        <img src="project-image.jpg" alt="Projects Image">
+      </div>
+
+      <div class="project-box">
+        <h3>The Online Book Store</h3>
+        <p>Description of The Online Book Store</p>
+        <img src="bookstore-image.jpg" alt="Book Store Image">
+      </div>
+
+      <div class="project-box">
+        <h3>Consulting</h3>
+        <p>Description of Consulting</p>
+        <img src="consulting-image.jpg" alt="Consulting Image">
+      </div>
+    </div>roject boxes go here -->
+
+    </div>
+
+    <section>
+      <h2>Section</h2>
+      <div>
+        <h3>Section Title</h3>
+        <p>Section content goes here.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="copyright">
+      &copy; 2023 Miguelano Designs | <a href="#" alt="home">Home</a>
+    </div>
+    <div class="contact-info">
+      <a href="#">About</a> | <a href="#">Contact</a>
+    </div>
+  </footer>
+</body>
+
+</html>
