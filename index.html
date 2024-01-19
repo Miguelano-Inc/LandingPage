@@ -64,7 +64,7 @@
       </div>
     </section>
         
-      </body>       
+      </body>
   </div>
 
   <footer>
@@ -75,18 +75,13 @@
       <a href="#">Privacy Notice</a> | <a href="#">Terms & Condition</a>
     </div>
   </footer>
-</body>
 
 </html>
-/* Reset default style and set padding and margin to zero */
-* {
+/* Reset default style and set padding and margin to zero 
+body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-/* White text throughout */
-body {
   background: linear-gradient(to left, #6600cc 0%, #0099cc 100%);
   font-family: 'Arial', sans-serif;
   color: white; /* Set text color to white */
@@ -97,23 +92,12 @@ header {
   background-color: #878f99;
   color: #fff;
   padding: 16px;
-margin-top: 16px;
+  margin-top: 16px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
-}
-
-/* Main Section Styles */
-#main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-}
-
 h3,
 h2,
 h4 {
@@ -128,17 +112,12 @@ h4 {
 }
 
 .project-box {
+  box-sizing: border-box;
   position: relative;
   justify-content: center;
   overflow: hidden;
-  width: 100%;
-  padding-top: 16px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  background: linear-gradient(45deg, #8e44ad, #9b59b6, #a349a4, #943bea);
+  min-width: 200px
+ient(45deg, #8e44ad, #9b59b6, #a349a4, #943bea);
 }
 
 .project-box:hover {
