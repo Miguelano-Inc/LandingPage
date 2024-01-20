@@ -132,6 +132,48 @@
       --primary-color: #3498db; /* Define a variable for the primary color */
     }
 
+
+        <style>
+    /* Common styles for all buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Primary button style */
+    .btn-primary {
+      background-color: #3498db;
+      color: #fff;
+      border: 2px solid #3498db;
+    }
+
+    /* Secondary button style */
+    .btn-secondary {
+      background-color: #2ecc71;
+      color: #fff;
+      border: 2px solid #2ecc71;
+    }
+
+    /* Danger button style */
+    .btn-danger {
+      background-color: #e74c3c;
+      color: #fff;
+      border: 2px solid #e74c3c;
+    }
+
+    /* Hover effect for all buttons */
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+      
+  </style>
     button {
       background-color: Blue;
       color: white; /* Set text color to white */
@@ -172,8 +214,7 @@
       <h3>A Webfolio of Projects and Programs</h3>
       <p>By Michael Que</p>
       <p>San Francisco, California</p>
-      <button>Profile</button>
-    </div>
+    <a href="#" class="btn btn-secondary">Profile</a>
 
     <div class="project-section">
       <div class="project-box">
