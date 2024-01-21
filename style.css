@@ -238,3 +238,8 @@ footer div {
   /* Additional styles for the copyright text inside the footer */
   font-weight: bold;
 }
+
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
