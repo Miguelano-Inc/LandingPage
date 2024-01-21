@@ -1,236 +1,97 @@
+<!-- HTML code for the landing page -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Work Within Queue</title>
-
-  <style>
-    /* Reset default style and set padding and margin to zero */
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    /* White text throughout */
-    body {
-      background: linear-gradient(to left, #6600cc 0%, #0099cc 100%);
-      font-family: 'Lato', sans-serif;
-      color: white; /* Set text color to white */
-       text-align: center;
-    }
-
-    /* Header Styles */
-    header,
-    footer
-    {
-      height: 100%;
-      weight: 100px;
-      background-color: black;
-      color: white;
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 16px;
-      padding-left: 32px;
-      padding-right: 32px;
-      padding-bottom: 16px
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    /* Main Section Styles */
-    #main {
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 20px;
-    }
-
-    h3,
-    h2,
-    h4 {
-      margin: 5px 0;
-    }
-
-    /* Project Section Styles */
-    .project-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .project-box {
-      position: relative;
-      overflow: hidden;
-      width: calc(33.33% - 20px); /* Three responsive squares with margin */
-      padding: 16px;
-      margin: 16px;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-      background: #d8d5f3; /* Light purple color */
-    }
-
-    .project-box:hover {
-      transform: scale(1.1);
-    }
-
-    .project-box img {
-      position: wrap;
-      top: 0;
-      left: 0;
-      width: auto;
-      height: auto;
-      object-fit: cover;
-      border-radius: 16px;
-      margin: 16px;
-      padding: 16px;
-    }
-
-    /* Footer Styles */
-    footer {
-
-
-    .copyright,
-    .contact-info {
-      margin-top: 10px;
-    }
-
-    /* Media Query for larger screens */
-    @media only screen and (min-width: 600px) {
-      #main {
-        flex-direction: row;
-      }
-
-      article {
-        margin-right: 20px;
-      }
-
-      .nav-list {
-        text-align: left;
-      }
-
-      .project-box {
-        width: calc(33.33% - 20px);
-      }
-
-      footer {
-        position: bottom-sticky;
-        flex-direction: row; /* For larger screens */
-      }
-    }
-
-    /* Button Styles */
-    :root {
-      --primary-color: #3498db; /* Define a variable for the primary color */
-    }
-
-    /* Common styles for all buttons */
-    .btn {
-      display: inline-block;
-      padding: 8px 16px;
-      font-size: 16px;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 50px;
-      transition: background-color 0.3s ease;
-    }
-
-    /* Primary button style */
-    .btn-primary {
-      background-color: #3498db;
-      color: #fff;
-      border: 2px solid #3498db;
-    }
-
-    /* Secondary button style */
-    .btn-secondary {
-      background-color: #2ecc71;
-      color: #fff;
-      border: 2px solid #2ecc71;
-    }
-
-    /* Danger button style */
-    .btn-danger {
-      background-color: #e74c3c;
-      color: #fff;
-      border: 2px solid #e74c3c;
-    }
-
-    /* Hover effect for all buttons */
-    .btn:hover {
-      transition: background-color 0.10s, color 0.30s;
-      
-    .login-btn,
-    button {
-      background-color: green;
-      border-radius: 5px; /* Keep it consistent */
-    }
-  </style>
+  <title>Landing Page</title>
+  <!-- Link to the font awesome icons library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Link to the custom CSS file -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <img src="./QueueLogo" class="w3-circle" alt="Weblogo"></image>
-    <div class="w3-top">
-      <div class="w3-bar w3-black">
-        <a href="#home" class="w3-bar-item w3-button">Home</a>
-        <a href="#about" class="w3-bar-item w3-button">About</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <button class="login-btn" onclick="redirectToGoogleAuthentication()">Login</button>
+  <!-- Header section -->
+  <header id="header">
+    <!-- Logo on the left -->
+    <div class="logo">
+      <img src="logo.png" alt="Logo" class="logo-image">
     </div>
-    </header>
-  
-  <div class="main-container">
-
-    <div class="article-content">
-      <h3>A Webfolio of Projects and Programs</h3>
-      <p>By Michael Que</p>
-      <p>San Francisco, California</p>
-    <a href="#" class="btn btn-secondary">Profile</a>
-
-    <div class="project-section">
-      <div class="project-box">
-        <h3>Projects</h3>
-        <p>Description of Projects</p>
-        <img src="./FolderIcon.png" alt="Projects Image">
-      </div>
-
-      <div class="project-box">
-        <h3>The Online Book Store</h3>
-        <p>Description of The Online Book Store</p>
-        <img src="./ShoppingBagsIcon.png" alt="Book Store Image">
-      </div>
-
-      <div class="project-box">
-        <h3>Consulting</h3>
-        <p>Description of Consulting</p>
-        <img src="./BizIcon.png" alt="Consulting Image">
-      </div>
+    <!-- Navigation tabs in the middle -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Icon and login button on the right -->
+    <div class="login">
+      <i class="fas fa-user-circle icon"></i>
+      <button class="login-button">Login</button>
     </div>
-
-    <aside class="responsive-container">
-      <div>
-        <img src="./animation.png" alt="AnimateFrontPage">
+  </header>
+  <!-- Main section -->
+  <main id="main">
+    <!-- Menu section with four containers -->
+    <section id="menu">
+      <!-- Container 1 -->
+      <div class="container">
+        <div class="title">Title 1</div>
+        <img src="image1.jpg" alt="Image 1" class="image">
+        <div class="description">Description 1</div>
       </div>
-    </aside>
- 
-  <footer>
-    <div class="copyright">
-      &copy; 2023 Miguelano Designs | <a href="#" alt="home">Home</a>
-    </div>
-    <div class="contact-info">
-      <a href="#">About</a> | <a href="#">Contact</a>
+      <!-- Container 2 -->
+      <div class="container">
+        <div class="title">Title 2</div>
+        <img src="image2.jpg" alt="Image 2" class="image">
+        <div class="description">Description 2</div>
+      </div>
+      <!-- Container 3 -->
+      <div class="container">
+        <div class="title">Title 3</div>
+        <img src="image3.jpg" alt="Image 3" class="image">
+        <div class="description">Description 3</div>
+      </div>
+      <!-- Container 4 -->
+      <div class="container">
+        <!-- Profile picture -->
+        <img src="profile.jpg" alt="Profile" class="profile">
+        <!-- Two buttons -->
+        <div class="buttons">
+          <!-- Button 1 links to a Linkedin page -->
+          <a href="https://www.linkedin.com/in/your-name/" class="button">Linkedin</a>
+          <!-- Button 2 opens an overlay of pdf document -->
+          <button class="button" id="open">Resume</button>
+        </div>
+      </div>
+    </section>
+    <!-- Overlay section -->
+    <section id="overlay">
+      <!-- Pdf document -->
+      <object data="resume.pdf" type="application/pdf" class="pdf"></object>
+      <!-- X mark to close the overlay -->
+      <span id="close">×</span>
+    </section>
+  </main>
+  <!-- Footer section -->
+  <footer id="footer">
+    <!-- Responsive container -->
+    <div class="container">
+      <!-- Left side -->
+      <div class="left">
+        <!-- Copyrigth text -->
+        <p>© THE WORK IN QUEUE 2024</p>
+      </div>
+      <!-- Right side -->
+      <div class="right">
+        <!-- Privacy notice and terms and condition links -->
+        <a href="#" class="link">Privacy Notice</a>
+        <a href="#" class="link">Terms and Condition</a>
+      </div>
     </div>
   </footer>
+  <!-- Link to the custom JavaScript file -->
+  <script src="script.js"></script>
 </body>
-
 </html>
