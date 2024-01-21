@@ -17,40 +17,58 @@
         <a href="#home" class="w3-bar-item w3-button">Home</a>
         <a href="#about" class="w3-bar-item w3-button">About</a>
         <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-        <button class="login-btn" onclick="redirectToGoogleAuthentication()">Login</button>
+          <div class="login">
+      <i class="fas fa-user-circle icon"></i>
+      <button class="login-button">Login</button>
+    </div>
       </div>
     </div>
   </header>
 </head>
-  <body>
-  <div class="main-container">
-    <div class="article-content">
-      <h3>A Webfolio of Projects and Programs</h3>
-      <p>By Michael Que</p>
-      <p>San Francisco, California</p>
-      <a href="#" class="btn btn-secondary">Profile</a>
-    </div>
-
-    <div class="project-section">
-      <div class="project-box">
-        <h3>Projects</h3>
-        <p>Description of Projects</p>
-        <img src="./FolderIcon.png" alt="Projects Image">
+  <!-- Main section -->
+  <main id="main">
+    <!-- Menu section with four containers -->
+    <section id="menu">
+      <!-- Container 1 -->
+      <div class="container">
+        <div class="title">Title 1</div>
+        <img src="image1.jpg" alt="Image 1" class="image">
+        <div class="description">Description 1</div>
       </div>
-
-      <div class="project-box">
-        <h3>The Online Book Store</h3>
-        <p>Description of The Online Book Store</p>
-        <img src="./ShoppingBagsIcon.png" alt="Book Store Image">
+      <!-- Container 2 -->
+      <div class="container">
+        <div class="title">Title 2</div>
+        <img src="image2.jpg" alt="Image 2" class="image">
+        <div class="description">Description 2</div>
       </div>
-
-      <div class="project-box">
-        <h3>Consulting</h3>
-        <p>Description of Consulting</p>
-        <img src="./BizIcon.png" alt="Consulting Image">
+      <!-- Container 3 -->
+      <div class="container">
+        <div class="title">Title 3</div>
+        <img src="image3.jpg" alt="Image 3" class="image">
+        <div class="description">Description 3</div>
       </div>
-    </div>
-
+      <!-- Container 4 -->
+      <div class="container">
+        <!-- Profile picture -->
+        <img src="profile.jpg" alt="Profile" class="profile">
+        <!-- Two buttons -->
+        <div class="buttons">
+          <!-- Button 1 links to a Linkedin page -->
+          <a href="https://www.linkedin.com/in/your-name/" class="button">Linkedin</a>
+          <!-- Button 2 opens an overlay of pdf document -->
+          <button class="button" id="open">Resume</button>
+        </div>
+      </div>
+    </section>
+    <!-- Overlay section -->
+    <section id="overlay">
+      <!-- Pdf document -->
+      <object data="resume.pdf" type="application/pdf" class="pdf"></object>
+      <!-- X mark to close the overlay -->
+      <span id="close">×</span>
+    </section>
+  </main>
+  <!-- Footer section -->
     <aside class="responsive-container">
       <div>
         <img src="./animation.png" alt="AnimateFrontPage">
