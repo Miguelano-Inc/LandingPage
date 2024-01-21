@@ -100,6 +100,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   border: 1px solid black;
+  border-radius: 8px;
   transition: background-color 0.3s;
 }
 
