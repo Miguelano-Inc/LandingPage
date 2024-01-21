@@ -37,6 +37,7 @@ body {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
+  wrap-direction: row;
   justify-content: center;
 }
 
