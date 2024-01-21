@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Lato, sans-serif;
   background: linear-gradient(to right, blue, purple);
 }
 
@@ -21,6 +21,7 @@ body {
 
 .logo {
   margin-left: 20px;
+  padding: 4px;
 }
 
 .logo-image {
