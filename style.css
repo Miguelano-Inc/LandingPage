@@ -122,8 +122,13 @@ body {
 }
 
 .image, .profile {
+  object-fit: cover
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  border-radius: 16px;
 }
 
 .description {
