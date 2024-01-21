@@ -6,8 +6,7 @@ body {
   background: linear-gradient(to right, blue, purple);
 }
 
-#header,
-#footer {
+#header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -219,4 +218,18 @@ body {
 
 .link:hover {
   text-decoration: underline;
+}
+/* Add these styles for the footer */
+#footer {
+  background-color: black;
+  padding: 8px 16px; /* 8px top and bottom, 16px on the sides */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white; /* Set text color to white */
+}
+
+footer div {
+  /* Additional styles for the copyright text inside the footer */
+  font-weight: bold;
 }
