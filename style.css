@@ -6,7 +6,8 @@ body {
   background: linear-gradient(to right, blue, purple);
 }
 
-#header {
+#header,
+#footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
