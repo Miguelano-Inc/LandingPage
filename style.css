@@ -191,7 +191,7 @@ body {
 /* Desktop Styles */
 @media screen and (min-width: 1024px)
 {
-  background-image: (url https://github.com/Miguelano-Inc/LandingPage/blob/be829ea7604a62979154d5df259eab34967f2ce2/gradient.svg)
+  background-image: <img style="width: 100%; height: 100%" src="https://via.placeholder.com/1440x960" />
 };
 {
   .container {
