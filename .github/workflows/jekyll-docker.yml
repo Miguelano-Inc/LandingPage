@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build: index.html
+  build: 
 
     runs-on: ubuntu-latest
 
