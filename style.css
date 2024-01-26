@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Lato, sans-serif;
-  background-image: (url https://github.com/Miguelano-Inc/LandingPage/blob/be829ea7604a62979154d5df259eab34967f2ce2/gradient.svg);
+  
 }
 
 #header {
@@ -189,7 +189,11 @@ body {
 }
 
 /* Desktop Styles */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px)
+{
+  background-image: (url https://github.com/Miguelano-Inc/LandingPage/blob/be829ea7604a62979154d5df259eab34967f2ce2/gradient.svg)
+};
+{
   .container {
     width: 30%;
   }
