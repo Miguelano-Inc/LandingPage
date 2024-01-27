@@ -1,40 +1,34 @@
----
---
-.navigation li: hover { background: var(--nav-item-bg-hover); 
-.navigation>li: hover>a background-position: 0; 
-.navigation>\i>a>sva width: 1rem; height: 1rem; transition: all 0.7s ease; 
-.navigation>li:hover>a>sva { stroke: var(--primary); transform: rotate(90deg); 
-.subnavigation wrapper { overflow: hidden; max-height: 0; position: absolute; transition: max-height 0.3s ease-in-out; background-color: var(--nav-background); width: 100%; 
-.navigation>li: hover .subnavigation wrapper max-height: 20rem; top: var(- -navbar-height) ; display: flex; gap: 1rem; flex-direction: column; 
-style.css 
-: root { - -primary: 1#24ce8f ; -background: black; - -nav-background: 0#141318; - -nav-item-bg-hover: #79797920; - - navbar-height: 4rem; - -text -gray: #252525; - - text-white: white; 
-margin: 0; padding: 0; box- sizing: border-box; 
-body { font -family: Poppins, sans-serif; display: flex; justify-content: center; align -items: center; height: 100vh; background: var(- -background); 
-nav { background: var(--nav-background); display: flex; justify-content: center; width: 100%; height: var(- -navbar-height); 
-. navigation { max-width: 600px; width: 100%; display: flex; flex-direction: row; list-style-type: none; align -items: center; 
-0 + 0 
-. navigation>li { position: relative; transition: all 0.5s ease; flex-grow: 1; user-select: none; 
-navigation a { display: flex; align-items: center; justify-content: center; text -align: center; padding: 0.75rem 1.5rem; color: var(- -text -white); min-height: 4rem; font -weight: bold; letter-spacing: 0.1rem; 
-text-decoration: none; background -image: linear-gradient( to right, var(- -primary), var(--primary) 50%, var(--text-white) 50%); background-size: 200% 100%; background -position: -100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: all 0.7s ease; gap: 0.25rem; 
-.navigation a: hover { background-position: 0; 
-. navigation li: hover { background: var(- -nav-item-bg-hover); } 
-. navigation>li: hover>a { background -position: 0; } 
-•navigation>li>a>svg { width: 1rem; height: 1rem; transition: all 0.7s ease; 
-.navigation>li: hover>a>svg { stroke: var(- -primary); transform: rotate(90deg); 
-• subnavigationwrapper { overflow: hidden; max-height: 0; position: absolute; transition: max-height 0.3s ease-in-out; background-color: var(--nav-background); width: 100%; 
-.navigation>li: hover .subnavigation wrapper { max-height: 20 rem; top: var (- -navbar-height); display: flex; gap: 1rem; flex-direction: column; 
-
-@import "{{ site.theme }}";
-/* Mobile Styles */
-body {
-  display: box-right;
-  margin: 0;
-  padding: 0;
-  font-family: Lato, sans-serif;
-  
+:root {
+  --primary: #24ce8f;
+  --background: black;
+  --nav-background: #141318;
+  --nav-item-bg-hover: #79797920;
+  --navbar-height: 4rem;
+  --text-gray: #252525;
+  --text-white: white;
 }
 
-#header {
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background: var(--nav-background);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: var(--navbar-height);
+}
+
+.header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,10 +50,6 @@ body {
 .logo-image {
   width: 75px;
   height: auto;
-}
-
-.nav {
-  flex: 1;
 }
 
 .nav-tab {
@@ -90,7 +80,7 @@ body {
 
 .button {
   color: white;
-  background-color: green
+  background-color: green;
   border: 1px solid white;
   border-radius: 50px;
   padding: 8px 16px;
@@ -104,10 +94,11 @@ body {
   font-size: 30px;
   margin-right: 10px;
 }
-.login-button
+
+.login-button {
   color: white;
   border: 1px solid white;
-  radius: 50px;
+  border-radius: 50px;
   padding: 8px 16px;
   cursor: pointer;
 }
@@ -124,7 +115,7 @@ body {
 
 .login-button:hover, .button:hover {
   background-color: rgba(255, 255, 255, 0.2);
-   border-radius: 50px;
+  border-radius: 50px;
   padding: 8px 16px;
 }
 
@@ -160,13 +151,12 @@ body {
 .title {
   font-weight: bold;
   text-align: center;
-  padding: 16px
+  padding: 16px;
   margin: 16px;
-  
 }
 
 .profile {
-  object-fit: cover
+  object-fit: cover;
   position: relative;
   top: 0;
   left: 0;
@@ -176,7 +166,7 @@ body {
 }
 
 .image {
-  object-fit: cover
+  object-fit: cover;
   position: relative;
   top: 0;
   left: 0;
@@ -184,6 +174,7 @@ body {
   height: auto;
   border-radius: 16px;
 }
+
 .description {
   padding: 8px;
 }
@@ -193,7 +184,7 @@ body {
   justify-content: center;
   gap: 32px;
   padding: 8px 16px;
-  button-radius: 50px
+  button-radius: 50px;
 }
 
 /* Tablet Styles */
@@ -212,11 +203,8 @@ body {
 }
 
 /* Desktop Styles */
-@media screen and (min-width: 1024px)
-{
-  background-image: <img style="width: 100%; height: 100%" src="https://via.placeholder.com/1440x960" />
-};
-{
+@media screen and (min-width: 1024px) {
+  background-image: url("https://via.placeholder.com/1440x960");
   .container {
     width: 30%;
   }
@@ -296,7 +284,7 @@ footer div {
   font-weight: bold;
 }
 
-    .responsive-image {
-      max-width: 100%;
-      height: auto;
-    }
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
