@@ -22,11 +22,6 @@
     /* Body styles */
     body {
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: var(--background);
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -39,6 +34,8 @@
       justify-content: center;
       width: 100%;
       height: var(--navbar-height);
+      position: fixed;
+      z-index: 1000;
     }
 
     .navigation {
@@ -122,7 +119,8 @@
       flex-direction: column;
       align-items: center;
       gap: 32px;
-      margin-top: 100px;
+      margin-top: var(--navbar-height);
+      padding-top: var(--navbar-height);
     }
 
     #menu {
@@ -141,6 +139,7 @@
       border-radius: 8px;
       transition: background-color 0.3s;
       width: 100%;
+      margin-bottom: 16px;
     }
 
     .container:hover {
@@ -224,6 +223,7 @@
         <h2>A Webfolio of Projects and Programs</h2>
         <p>By Michael Que</p>
         <p>San Francisco, California</p>
+        <img src="ProjMgmt.jpg" alt="Profile" class="profile">
         <div class="buttons">
           <a href="https://www.linkedin.com/in/michaelcque/" class="button">Linkedin</a>
           <button class="button" id="open">Resume</button>
@@ -268,10 +268,14 @@
 
   <!-- Footer section -->
   <footer>
+    <div class="footer-content">
+      <img src="ProjMgmt.png" alt="Project Management" class="responsive-image">
+      <div>
         <h4>&copy; 2023 Miguelano Designs</h4>
         <a href="#">About</a> | <a href="#">Contact</a>
+      </div>
+    </div>
   </footer>
-
 </body>
 
 </html>
