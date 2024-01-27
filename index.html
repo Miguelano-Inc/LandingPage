@@ -4,105 +4,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Work Within Queue - A Webfolio of Projects and Programs by Michael Que">
+  <meta name="author" content="Michael Que">
   <link rel="stylesheet" href="style.css">
   <title>The Work Within Queue</title>
+</head>
+
+<body>
 
   <!-- Header section -->
-<header id="header">
-  <!-- Logo on the left -->
-  <div class="logo">
-    <img src="QueueLogo.png" alt="Logo" class="logo-image">
-  </div>
-  <!-- Navigation tabs in the middle -->
+  <header id="header">
+    <div class="header-content">
+      <div class="logo">
+        <img src="QueueLogo.png" alt="Logo" class="logo-image">
+      </div>
+      <nav class="nav-tab">
+        <!-- Add your navigation links here -->
+        <!-- Navigation tabs in the middle -->
   <nav class="nav-tab">
     <ul>
       <li><a href="#" class="nav-link">Home</a>
         <!-- Dropdown list for home tab -->
         <ul>
-          <li><a href="#">Option 1</a></li>
-          <li><a href="#">Option 2</a></li>
-          <li><a href="#">Option 3</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Services</a></li>
         </ul>
       </li>
       <li><a href="#" class="nav-link">About</a>
         <!-- Dropdown list for about tab -->
         <ul>
-          <li><a href="#">Option 1</a></li>
-          <li><a href="#">Option 2</a></li>
-          <li><a href="#">Option 3</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#"></a>My Blog</li>
+          <li><a href="#">The Company</a></li>
         </ul>
       </li>
       <li><a href="#" class="nav-link">Contact</a></li>
     </ul>
-  </nav>
-  <!-- Icon and login button on the right -->
-  <div class="login">
-    <i class="fas fa-user-circle icon"></i>
-    <button class="login-button">Login</button>
-  </div>
-</header>
+      <div class="login">
+        <i class="fas fa-user-circle icon"></i>
+        <button class="login-button">Login</button>
+      </div>
+    </div>
+  </header>
 
-</head>
-
-    <!-- Main section -->
+  <!-- Main section -->
   <main id="main">
     <!-- Menu section with four containers -->
     <section id="menu">
-      <div class="container">
-        <!-- Profile picture -->
-      <h2>A Webfolio of Projects and Programs<h2>
-      <p>By Michael Que</p>
-      <p>San Francisco, California</p>
+      <!-- Profile section -->
+      <article class="profile-container">
+        <h2>A Webfolio of Projects and Programs</h2>
+        <p>By Michael Que</p>
+        <p>San Francisco, California</p>
         <img src="ProjMgmt.jpg" alt="Profile" class="profile">
-        <!-- Two buttons -->
         <div class="buttons">
-          <!-- Button 1 links to a Linkedin page -->
           <a href="https://www.linkedin.com/in/michaelcque/" class="button">Linkedin</a>
-          <!-- Button 2 opens an overlay of pdf document -->
           <button class="button" id="open">Resume</button>
         </div>
-        </div>
+      </article>
 
-      <!-- Container 1 -->
+      <!-- Container 0 -->
+      <article class="container">
+        <div class="title">Projects</div>
+        <img src="FolderIcon.png" alt="FolderIcon.png" class="responsive-image">
+        <div class="description">Projects description goes here.</div>
+      </article>
+ <!-- Container 1 -->
       <div class="container">
         <div class="Title"></div>
-        <img src="FolderIcon.png" alt="FolderIcon.png" class="responsive-image" height="auto" width="150px">
+        <img src="FolderIcon.png" alt="FolderIcon.png"  class="responsive-image">
         <div class="description">Projects</div>
-      </div>
+      </container>
       <!-- Container 2 -->
       <div class="container">
         <div class="Title"></div>
-        <img src="BizIcon.png" alt="BizIcon.png" class="responsive-image" height="auto" width="150px">
+        <img src="BizIcon.png" alt="BizIcon.png"  class="responsive-image">
         <div class="description">Consulting</div>
-      </div>
+      </container>
       <!-- Container 3 -->
       <div class="container">
         <div class="Title"></div>
-        <img src="ShoppingBagsIcon.png" alt="ShoppingBagsIcon.png" class="responsive-image" height="auto" width="150px">
+        <img src="ShoppingBagsIcon.png" alt="ShoppingBagsIcon.png" class="responsive-image">
         <div class="description">eBookstore</div>
-      </div>
-      <!-- Container 4 -->
+      </container>
 
-      </div>
     </section>
+
     <!-- Overlay section -->
     <section id="overlay">
-      <!-- Pdf document -->
       <object data="resume.pdf" type="application/pdf" class="pdf"></object>
-      <!-- X mark to close the overlay -->
       <span id="close">×</span>
     </section>
+
   </main>
+
   <!-- Footer section -->
-    <div class="container">
-        <img src="ProjMgmt.png" alt="Project Management" class="responsive-image">
-      </div>
-</body>
   <footer>
-      <h4>&copy; 2023 Miguelano Designs</h4>
-      <a href="#">About</a> | <a href="#">Contact</a>
+    <div class="footer-content">
+      <img src="ProjMgmt.png" alt="Project Management" class="responsive-image">
+      <div>
+        <h4>&copy; 2023 Miguelano Designs</h4>
+        <a href="#">About</a> | <a href="#">Contact</a>
+      </div>
+    </div>
   </footer>
 
-
+</body>
 
 </html>
