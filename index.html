@@ -11,39 +11,113 @@
 </head>
 
 <body>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>The Work Within Queue</title>
-</head>
-
-<body>
   <!-- Header section -->
   <header id="header">
+    <style>
+      nav {
+        background: var(--nav-background);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: var(--navbar-height);
+      }
+
+      .navigation {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: center;
+      }
+
+      .navigation>li {
+        position: relative;
+        transition: all 0.5s ease;
+        flex-grow: 1;
+        user-select: none;
+      }
+
+      .navigation a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.75rem 1.5rem;
+        color: var(--text-white);
+        min-height: 4rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
+        background-image: linear-gradient(to right, var(--primary), var(--primary) 50%, var(--text-white) 50%);
+        background-size: 200% 100%;
+        background-position: -100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.7s ease;
+        gap: 0.25rem;
+      }
+
+      .navigation a:hover {
+        background-position: 0;
+      }
+
+      .navigation li:hover {
+        background: var(--nav-item-bg-hover);
+      }
+
+      .navigation>li:hover>a {
+        background-position: 0;
+      }
+
+      .navigation>li>a>svg {
+        width: 1rem;
+        height: 1rem;
+        transition: all 0.7s ease;
+      }
+
+      .navigation>li:hover>a>svg {
+        stroke: var(--primary);
+        transform: rotate(90deg);
+      }
+
+      .subnavigation-wrapper {
+        overflow: hidden;
+        max-height: 0;
+        position: absolute;
+        transition: max-height 0.3s ease-in-out;
+        background-color: var(--nav-background);
+        width: 100%;
+      }
+
+      .navigation>li:hover .subnavigation-wrapper {
+        max-height: 20rem;
+        top: var(--navbar-height);
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+      }
+    </style>
+
     <div class="header-content">
       <div class="logo">
         <img src="QueueLogo.png" alt="Logo" class="logo-image">
       </div>
-  
+
       <nav class="navigation">
         <ul>
           <li><a href="#" class="nav-link">Home</a>
-              <nav class="subnavigation">
+            <nav class="subnavigation">
               <li><a href="#">Portfolio</a></li>
               <li><a href="#">Services</a></li>
-              </div>
-            </ul>
+            </nav>
           </li>
           <li><a href="#" class="nav-link">About</a>
             <nav class="subnavigation">
               <li><a href="#">Profile</a></li>
               <li><a href="#">My Blog</a></li>
               <li><a href="#">The Company</a></li>
-            <div>
+            </nav>
           </li>
           <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
@@ -59,10 +133,57 @@
   <!-- Rest of your HTML content -->
   <!-- Main section -->
   <main id="main">
+    <style>
+      #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        margin-top: 100px;
+      }
+
+      #menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+      }
+    </style>
+
     <!-- Menu section with four containers -->
     <section id="menu">
       <!-- Profile section -->
       <article class="profile-container">
+        <style>
+          .profile-container {
+            text-align: center;
+          }
+
+          .profile-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .profile-container p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .profile {
+            width: 200px;
+            height: auto;
+            border-radius: 16px;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 8px 16px;
+            button-radius: 50px;
+          }
+        </style>
+
         <h2>A Webfolio of Projects and Programs</h2>
         <p>By Michael Que</p>
         <p>San Francisco, California</p>
@@ -75,33 +196,155 @@
 
       <!-- Container 0 -->
       <article class="container">
+        <style>
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            wrap-direction: row;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+          }
+
+          .container:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          .title {
+            font-weight: bold;
+            text-align: center;
+            padding: 16px;
+            margin: 16px;
+          }
+        </style>
+
         <div class="title">Projects</div>
         <img src="FolderIcon.png" alt="FolderIcon.png" class="responsive-image">
         <div class="description">Projects description goes here.</div>
       </article>
- <!-- Container 1 -->
+
+      <!-- Container 1 -->
       <div class="container">
+        <style>
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            wrap-direction: row;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+          }
+
+          .container:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          .title {
+            font-weight: bold;
+            text-align: center;
+            padding: 16px;
+            margin: 16px;
+          }
+        </style>
+
         <div class="Title"></div>
-        <img src="FolderIcon.png" alt="FolderIcon.png"  class="responsive-image">
+        <img src="FolderIcon.png" alt="FolderIcon.png" class="responsive-image">
         <div class="description">Projects</div>
-      </container>
+      </div>
+
       <!-- Container 2 -->
       <div class="container">
+        <style>
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            wrap-direction: row;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+          }
+
+          .container:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          .title {
+            font-weight: bold;
+            text-align: center;
+            padding: 16px;
+            margin: 16px;
+          }
+        </style>
+
         <div class="Title"></div>
-        <img src="BizIcon.png" alt="BizIcon.png"  class="responsive-image">
+        <img src="BizIcon.png" alt="BizIcon.png" class="responsive-image">
         <div class="description">Consulting</div>
-      </container>
+      </div>
+
       <!-- Container 3 -->
       <div class="container">
+        <style>
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            wrap-direction: row;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+          }
+
+          .container:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          .title {
+            font-weight: bold;
+            text-align: center;
+            padding: 16px;
+            margin: 16px;
+          }
+        </style>
+
         <div class="Title"></div>
         <img src="ShoppingBagsIcon.png" alt="ShoppingBagsIcon.png" class="responsive-image">
         <div class="description">eBookstore</div>
-      </container>
+      </div>
 
     </section>
 
     <!-- Overlay section -->
     <section id="overlay">
+      <style>
+        #overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.8);
+          z-index: 2;
+        }
+
+        .pdf {
+          width: 80%;
+          height: 80%;
+          margin: 10% auto;
+        }
+
+        #close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+        }
+      </style>
       <object data="resume.pdf" type="application/pdf" class="pdf"></object>
       <span id="close">×</span>
     </section>
@@ -110,6 +353,27 @@
 
   <!-- Footer section -->
   <footer>
+    <style>
+      #footer {
+        background-color: black;
+        padding: 8px 16px; /* 8px top and bottom, 16px on the sides */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white; /* Set text color to white */
+      }
+
+      footer div {
+        /* Additional styles for the copyright text inside the footer */
+        font-weight: bold;
+      }
+
+      .responsive-image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+
     <div class="footer-content">
       <img src="ProjMgmt.png" alt="Project Management" class="responsive-image">
       <div>
