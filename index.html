@@ -1,275 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Work Within Queue - A Webfolio of Projects and Programs by Michael Que">
-  <meta name="author" content="Michael Que">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Your root styles */
-    :root {
-      --primary: #24ce8f;
-      --background: black;
-      --nav-background: #141318;
-      --nav-item-bg-hover: #79797920;
-      --navbar-height: 4rem;
-      --text-gray: #252525;
-      --text-white: white;
-    }
-
-    /* Body styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Header styles */
-    nav {
-      background: var(--nav-background);
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: var(--navbar-height);
-      position: fixed;
-      z-index: 1000;
-    }
-
-    .navigation {
-      max-width: 600px;
-      width: 100%;
-      display: inline;
-      flex-direction: row;
-      list-style-type: none;
-      align-items: center;
-    }
-
-    .navigation>li {
-      position: relative;
-      transition: all 0.5s ease;
-      flex-grow: 1;
-      user-select: none;
-    }
-
-    .navigation a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0.75rem 1.5rem;
-      color: var(--text-white);
-      min-height: 4rem;
-      font-weight: bold;
-      letter-spacing: 0.1rem;
-      text-decoration: none;
-      background-image: linear-gradient(to right, var(--primary), var(--primary) 50%, var(--text-white) 50%);
-      background-size: 200% 100%;
-      background-position: -100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: all 0.7s ease;
-      gap: 0.25rem;
-    }
-
-    .navigation a:hover {
-      background-position: 0;
-    }
-
-    .navigation li:hover {
-      background: var(--nav-item-bg-hover);
-    }
-
-    .navigation>li:hover>a {
-      background-position: 0;
-    }
-
-    .navigation>li>a>svg {
-      width: 1rem;
-      height: 1rem;
-      transition: all 0.7s ease;
-    }
-
-    .navigation>li:hover>a>svg {
-      stroke: var(--primary);
-      transform: rotate(90deg);
-    }
-
-    .subnavigation-wrapper {
-      overflow: hidden;
-      max-height: 0;
-      position: absolute;
-      transition: max-height 0.3s ease-in-out;
-      background-color: var(--nav-background);
-      width: 100%;
-    }
-
-    .navigation>li:focus-within .subnavigation-wrapper {
-      max-height: 20rem;
-      display: flex;
-      gap: 1rem;
-      flex-direction: column;
-    }
-
-    /* Main section styles */
-    #main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-      margin-top: var(--navbar-height);
-      padding-top: var(--navbar-height);
-    }
-
-    #menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 80%;
-    }
-
-    /* Container styles */
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      border: 1px solid black;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-      width: 100%;
-      margin-bottom: 16px;
-      box-sizing: border-box;
-    }
-
-    .container:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .title {
-      font-weight: bold;
-      text-align: center;
-      padding: 16px;
-      margin: 16px;
-    }
-
-    /* Responsive Container Styles */
-    @media screen and (min-width: 769px) {
-      .nav {
-        display: flex;
-      }
-
-      .logo,
-      .login {
-        margin: 0 auto;
-        width: 50px;
-        height: 50px;
-      }
-
-      .container {
-        width: 48%;
-      }
-    }
-
-    /* Desktop Styles */
-    @media screen and (min-width: 1024px) {
-      background-image: url("https://via.placeholder.com/1440x960");
-      .container {
-        width: 30%;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webfolio: CSM</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Assuming you have the CSS styles in a file named "styles.css" -->
+  <!-- Don't forget to include the appropriate font (Poppins) in your project -->
 </head>
-
 <body>
-  <!-- Header section -->
-  <header class="nav">
-  <header id="header">
-    <div class="header-content">
-      <div class="logo">
-        <img src="QueueLogo.png" alt="Logo" class="logo-image">
-      </div>
-
-      <nav class="navigation">
-        <ul>
-          <li tabindex="0"><a href="#" class="nav-link">Home</a>
-            <div class="subnavigation-wrapper">
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Services</a></li>
-            </div>
-          </li>
-          <li tabindex="0"><a href="#" class="nav-link">About</a>
-            <div class="subnavigation-wrapper">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">My Blog</a></li>
-              <li><a href="#">The Company</a></li>
-            </div>
-          </li>
-          <li tabindex="0"><a href="#" class="nav-link">Contact</a></li>
-        </ul>
-    </div>
-      </nav>
-
-      <div class="login">
-        <i class="fas fa-user-circle icon"></i>
-        <button class="login-button">Login</button>
-      </div>
-    </div>
+  <!-- Header/Navigation -->
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><img src="image.png" alt="Logo" height="50px" width="50px"></li>
+        <li><a href="#">The CMS</a></li>
+        <li><a href="#">Solution</a></li>
+        <li><a href="#">Process</a></li>
+        <li><a href="#">Mock Design</a></li>
+        <li><button>Login</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Rest of your HTML content -->
-  <!-- Main section -->
-  <main id="main">
-    <!-- Menu section with four containers -->
-    <section id="menu">
-      <!-- Profile section -->
-      <article class="profile-container">
-        <h2>A Webfolio of Projects and Programs</h2>
-        <p>By Michael Que</p>
-        <p>San Francisco, California</p>
-        <div class="buttons">
-          <a href="https://www.linkedin.com/in/michaelcque/" class="button">Linkedin</a>
-          <button class="button" id="open">Resume</button>
-        </div>
-      </article>
+  <!-- Main Section -->
+  <div id="main">
+    <div class="image-carousel">
+      <img src="image1.jpg" alt="Image 1">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+      <img src="image4.jpg" alt="Image 4">
+      <img src="image5.jpg" alt="Image 5">
+      <img src="image1.jpg" alt="Image 6">
+      <img src="image2.jpg" alt="Image 7">
+      <img src="image3.jpg" alt="Image 8">
+      <img src="image4.jpg" alt="Image 9">
+      <img src="image5.jpg" alt="Image 10">
+    </div>
+    <!-- Containers -->
+    <div class="container">
+      <div class="title">Container 1</div>
+      <!-- Container content goes here -->
+    </div>
 
-      <!-- Container 1 -->
-      <div class="container">
-        <div class="Title"></div>
-        <img src="FolderIcon.png" alt="FolderIcon.png" class="responsive-image">
-        <div class="description">Projects</div>
-      </div>
+    <div class="container">
+      <div class="title">Container 2</div>
+      <!-- Container content goes here -->
+    </div>
+    <!-- Add more containers as needed -->
+  </div>
 
-      <!-- Container 2 -->
-      <div class="container">
-        <div class="Title"></div>
-        <img src="BizIcon.png" alt="BizIcon.png" class="responsive-image">
-        <div class="description">Consulting</div>
-      </div>
-
-      <!-- Container 3 -->
-      <div class="container">
-        <div class="Title"></div>
-        <img src="ShoppingBagsIcon.png" alt="ShoppingBagsIcon.png" class="responsive-image">
-        <div class="description">eBookstore</div>
-      </div>
-    </section>
-
-    <!-- Overlay section -->
-    <section id="overlay">
-      <object data="resume.pdf" type="application/pdf" class="pdf"></object>
-      <span id="close">×</span>
-    </section>
-  </main>
-
-  <!-- Footer section -->
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-        <h4>&copy; 2023 Miguelano Designs</h4>
-        <a href="#">About</a> | <a href="#">Contact</a>
-      </div>
+    <div class="footer">
+      <a href="#">The Webfolio</a>
+      <a href="#">Privacy Notice</a>
+    </div>
   </footer>
 </body>
+</html>
 
+<style>
+  /* Your root styles */
+  :root {
+    --primary: #24ce8f;
+    --nav-background: #141318;
+    --nav-item-bg-hover: #79797920;
+    --navbar-height: 80px; /* Adjusted value */
+    --text-white: white;
+  }
+
+  /* Body styles */
+  body, html {
+    font-family: "Poppins", sans-serif;
+    background: black;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /* Header styles */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    background: var(--nav-background);
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    height: var(--navbar-height);
+    padding: 8px 16px;
+    margin: 0px;
+  }
+
+  button {
+    border-radius: 50px;
+    padding: 8px 16px;
+    background-color: green;
+    border-color: green;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.7s ease;
+  }
+
+  .navigation {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center; /* Center the navigation items */
+  }
+
+  .navigation > li {
+    position: relative;
+    width: wrap; 
+    transition: all 0.5s ease;
+    user-select: none;
+    margin-right: 10px; /* Add margin between navigation items */
+    display: inline-flex; /* Display navigation items inline */
+    border-radius: 50px;
+  }
+/.;, lmknbvgfcx
+  .navigation img {
+    border-radius: 50%;
+  }
+
+  .navigation a,
+  button {
+    display: inline-block; /* Display anchor elements inline */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-white);
+    height: wrap;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to right,
+      var(--primary),
+      var(--primary) 50%,
+      var(--text-white) 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.7s ease;
+    gap: 0.25rem;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .navigation a:hover,
+  button:hover {
+    background-position: 0;
+  }
+
+  .navigation li:hover {
+    background: var(--nav-item-bg-hover);
+  }
+
+  .navigation > li:hover > a,
+  .navigation > li:hover > button {
+    background-position: 0;
+  }
+
+  .navigation > li > a > svg {
+    width: 1rem;
+    height: 1rem;
+    transition: all 0.7s ease;
+  }
+
+  .navigation > li:hover > a > svg {
+    stroke: var(--primary);
+    transform: rotate(90deg);
+  }
+
+  .navigation > li:focus-within .subnavigation-wrapper {
+    max-height: 20rem;
+    display: wrap;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  /* Main section styles */
+  #main {
+    margin-top: var(--navbar-height);
+    padding-top: var(--navbar-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  #menu {
+    display: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+  }
+
+  /* Container styles */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .title {
+    font-weight: bold;
+    text-align: center;
+    padding: 16px;
+    margin: 16px;
+  }
+
+ 
+/* CAROUSEL */
+.image-placeholder {
+    background: #fff; /* White background for placeholder */
+    height: 200px; /* Set the height of the placeholder */
+    margin-right: 16px; /* Adjust margin as needed */
+    width: 100%;
+    flex: 0 0 100%; /* Each item takes up full width */
+  }
+.carousel-container {
+  overflow: hidden;
+  margin-top: var(--navbar-height);
+  background-color: #808080; /* Set the background color to gray */
+}
+
+.image-carousel {
+  display: flex;
+  width: 100%;
+  flex: 0 0 100%; /* Each item takes up full width */
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+  margin-top: var(--navbar-height);
+  gap: 32px; /* Add gap between images */
+}
+
+.image-carousel img {
+  width: 100%;
+  transition: transform 10s ease-in-out;
+  border: 2px solid #fff; /* Add border to images */
+  border-radius: 8px; /* Set border radius */
+}
+
+/* Hide all images except the first one */
+.image-carousel img:not(:first-child) {
+  transform: translateX(100%);
+}
+
+/* Automatic image transition */
+@keyframes imageAnimation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 80% {
+    transform: translateX(-100%);
+  }
+  40%, 60% {
+    transform: translateX(-200%);
+  }
+}
+
+.image-carousel img {
+  animation: imageAnimation 5s infinite;
+}
+
+/* Hover effect on selected picture */
+.image-carousel:hover img {
+  animation-play-state: paused;
+}
+
+/* Placeholder styling */
+.image-placeholder {
+  background-color: #3498db; /* Set the background color to blue */
+  height: 300px; /* Set the height of the placeholder */
+  width: 200px; /* Set the width of the placeholder */
+  border-radius: 8px; /* Set border radius */
+  margin-right: 32px; /* Adjust margin as needed */
+}
+
+/* CAROUSEL */
+
+
+   /*/ FOOTER /*/
+   footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .footer {
+    background: #121212;
+    padding: 16px 16px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+ 
+  }
+
+  .footer > a {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: var(--text-white);
+    min-height: 40px;
+    letter-spacing: 0.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to right,
+      var(--primary),
+      var(--primary) 50%,
+      var(--text-white) 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(245, 252, 23)3);
+    transition: all 0.7s ease;
+    gap: 16px;
+    cursor: pointer;
+  }
+  .footer > a:hover {
+    transition: color 0.5s;
+    font-weight: bold;
+  }
+  /*/ FOOTER /*/
+
+  /* Responsive Container Styles */
+  @media screen and (min-width: 769px) {
+    .navigation {
+      padding: 0 64px;
+    }
+
+    .container {
+      width: 48%;
+    }
+  }
+
+  /* Desktop Styles */
+  @media screen and (min-width: 1024px) {
+    body {
+      background-image: url("https://via.placeholder.com/1440x960");
+    }
+
+    .container {
+      width: 30%;
+    }
+  }
+</style>
 </html>
